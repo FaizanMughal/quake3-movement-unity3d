@@ -182,9 +182,8 @@ namespace Q3Movement
             // Change direction while slowing down.
             if (dot > 0)
             {
-                m_PlayerVelocity.x *= speed + targetDir.x * k;
-                m_PlayerVelocity.y *= speed + targetDir.y * k;
-                m_PlayerVelocity.z *= speed + targetDir.z * k;
+                m_PlayerVelocity.x = m_PlayerVelocity.x * speed + targetDir.x * k;
+                m_PlayerVelocity.z = m_PlayerVelocity.z * speed + targetDir.z * k;
 
                 m_PlayerVelocity.Normalize();
                 m_MoveDirectionNorm = m_PlayerVelocity;
